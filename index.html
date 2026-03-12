@@ -1,327 +1,254 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Kaushik Janmanchi</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaushik Janmanchi | Portfolio</title>
 <style>
-
-body{
-margin:0;
-font-family:system-ui;
-color:#e2e8f0;
-line-height:1.6;
-
-background-image:url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31");
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+/* Reset & body styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #e2e8f0;
+    line-height: 1.6;
+    background-image: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(10,14,25,0.85);
-z-index:-1;
+body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(10,14,25,0.85);
+    z-index: -1;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:40px;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-h1{
-margin-bottom:5px;
-font-size:36px;
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.role{
-color:#38bdf8;
-margin-bottom:20px;
-font-size:18px;
+header h1 {
+    font-size: 42px;
+    margin-bottom: 5px;
 }
 
-p{
-color:#cbd5f5;
+header .role {
+    font-size: 18px;
+    color: #38bdf8;
 }
 
-.buttons{
-margin-top:20px;
-margin-bottom:30px;
+/* Intro */
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto 40px;
+    color: #cbd5f5;
 }
 
-.buttons a{
-text-decoration:none;
-margin-right:12px;
-background:#38bdf8;
-color:#020617;
-padding:10px 18px;
-border-radius:6px;
-font-weight:600;
+.buttons {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.buttons a:hover{
-background:#0ea5e9;
+.buttons a {
+    text-decoration: none;
+    margin: 0 12px;
+    background: #38bdf8;
+    color: #020617;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.widget{
-margin-top:35px;
-display:flex;
-align-items:center;
-gap:18px;
-background:rgba(15,23,42,0.65);
-backdrop-filter:blur(10px);
-padding:20px 25px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,0.05);
-width:fit-content;
+.buttons a:hover {
+    background: #0ea5e9;
 }
 
-.widget h2{
-margin:0;
-font-size:28px;
-color:#38bdf8;
+/* Widget for Experience */
+.widget {
+    text-align: center;
+    background: rgba(15,23,42,0.65);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 60px;
 }
 
-.widget span{
-font-size:14px;
-color:#94a3b8;
+.widget h2 {
+    font-size: 32px;
+    margin: 0;
+    color: #38bdf8;
 }
 
-.section{
-margin-top:60px;
+.widget span {
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    color: #94a3b8;
 }
 
-.section h2{
-border-bottom:1px solid #1e293b;
-padding-bottom:10px;
-margin-bottom:25px;
+/* Sections */
+.section {
+    margin-bottom: 60px;
 }
 
-.job{
-background:rgba(15,23,42,0.65);
-backdrop-filter:blur(10px);
-padding:22px;
-border-radius:10px;
-margin-bottom:20px;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.2s;
+.section h2 {
+    font-size: 26px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
 }
 
-.job:hover{
-transform:translateY(-4px);
-border-color:#38bdf8;
+/* Skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.job h3{
-margin:0;
+.skills span {
+    background: rgba(30,41,59,0.7);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
-.job span{
-color:#94a3b8;
-font-size:14px;
+/* Work / Projects cards */
+.card {
+    background: rgba(15,23,42,0.65);
+    backdrop-filter: blur(10px);
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.2s, border-color 0.2s;
 }
 
-ul{
-margin-top:10px;
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
 }
 
-.skills span{
-background:rgba(30,41,59,0.7);
-padding:6px 12px;
-border-radius:6px;
-font-size:13px;
-margin:5px;
-display:inline-block;
-border:1px solid rgba(255,255,255,0.05);
+.card h3 {
+    margin-top: 0;
 }
 
-footer{
-margin-top:70px;
-text-align:center;
-color:#94a3b8;
-font-size:14px;
+.card span {
+    font-size: 14px;
+    color: #94a3b8;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 14px;
+    margin-top: 70px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 32px;
+    }
+    .widget h2 {
+        font-size: 26px;
+    }
+}
 </style>
-
 </head>
-
 <body>
-
 <div class="container">
 
-<h1>Kaushik Janmanchi</h1>
+<header>
+    <h1>Kaushik Janmanchi</h1>
+    <div class="role">GraphDB Specialist & DevOps Engineer</div>
+</header>
 
-<div class="role">
-GraphDB Specialist (Technical Support Engineer)
+<div class="intro">
+Site Reliability and DevOps Engineer with 5+ years of experience managing large-scale distributed and cloud-native systems. Skilled in Kubernetes, Docker, AWS, Python, and observability tooling to build reliable infrastructure platforms.
 </div>
 
-<p>
-Site Reliability and DevOps Engineer with 5+ years of experience managing large-scale distributed and cloud-native systems in production environments. Experienced in Kubernetes, Docker, AWS, observability tooling, and Linux system debugging to build scalable and reliable infrastructure platforms.
-</p>
-
 <div class="buttons">
-
 <a href="Kaushik-Janmanchi-Resume.pdf">Download Resume</a>
-
-<a href="https://linkedin.com/in/kaushik-janmanchi-2978b3157" target="_blank">
-LinkedIn
-</a>
-
-<a href="mailto:kaushik.janmanchi@gmail.com">
-Email
-</a>
-
+<a href="https://linkedin.com/in/kaushik-janmanchi-2978b3157" target="_blank">LinkedIn</a>
+<a href="mailto:kaushik.janmanchi@gmail.com">Email</a>
 </div>
 
 <div class="widget">
-
 <h2>5+</h2>
-
-<span>Years Experience in DevOps, SRE & Distributed Systems</span>
-
+<span>Years Experience in DevOps & SRE</span>
 </div>
 
 <div class="section">
-
 <h2>Technical Skills</h2>
-
 <div class="skills">
-
 <span>Python</span>
 <span>Shell Scripting</span>
-<span>Java</span>
-<span>SQL</span>
 <span>Kubernetes</span>
 <span>Docker</span>
 <span>AWS</span>
+<span>Terraform</span>
 <span>Prometheus</span>
 <span>Grafana</span>
-<span>Datadog</span>
 <span>Jenkins</span>
-<span>Terraform</span>
-<span>Helm</span>
-<span>Linux</span>
-<span>Apache Spark</span>
-
+<span>SQL</span>
 </div>
-
 </div>
 
 <div class="section">
+<h2>Professional Highlights</h2>
 
-<h2>Professional Experience</h2>
-
-<div class="job">
-
+<div class="card">
 <h3>GraphDB Specialist</h3>
-
 <span>Agivant Technologies | Oct 2025 – Present</span>
-
 <ul>
-
-<li>Supported large-scale distributed GraphDB clusters handling high-volume analytical workloads.</li>
-
-<li>Diagnosed cluster performance bottlenecks, JVM memory issues and query optimization challenges.</li>
-
-<li>Automated health checks and log analysis pipelines improving operational efficiency by 40%.</li>
-
-<li>Resolved complex L3 issues involving distributed storage, indexing and query latency.</li>
-
+<li>Managed large-scale GraphDB clusters and optimized query performance.</li>
+<li>Automated monitoring and log analysis, improving operational efficiency by 40%.</li>
 </ul>
-
 </div>
 
-<div class="job">
-
+<div class="card">
 <h3>Site Reliability Engineer</h3>
-
 <span>Oracle | Jun 2024 – Sep 2025</span>
-
 <ul>
-
-<li>Engineered automation frameworks in Python and Bash to monitor distributed systems serving 22,000+ customers.</li>
-
-<li>Troubleshot large-scale distributed applications reducing MTTR by ~30%.</li>
-
-<li>Led root cause analysis for multi-region production outages.</li>
-
-<li>Improved observability pipelines using Prometheus and Grafana.</li>
-
+<li>Built Python/Bash automation frameworks for distributed systems.</li>
+<li>Improved observability with Prometheus and Grafana, reducing MTTR by 30%.</li>
 </ul>
-
 </div>
 
-<div class="job">
-
+<div class="card">
 <h3>Associate Software Engineer</h3>
-
 <span>Solera Holdings | Oct 2022 – Jun 2024</span>
-
 <ul>
-
-<li>Built data pipelines using Python and MySQL for analytics dashboards.</li>
-
-<li>Automated reporting workflows reducing manual work by 50%.</li>
-
-<li>Optimized query performance across high-volume datasets.</li>
-
+<li>Developed data pipelines and automated reporting workflows, reducing manual work by 50%.</li>
 </ul>
-
-</div>
-
-<div class="job">
-
-<h3>System Trainee</h3>
-
-<span>Intellect Design Arena | Aug 2021 – Oct 2022</span>
-
-<ul>
-
-<li>Migrated Oracle database workflows via Java Servlets improving performance by 25%.</li>
-
-<li>Supported deployment of lending suite on IBM WebSphere Linux environments.</li>
-
-</ul>
-
 </div>
 
 </div>
 
 <div class="section">
-
 <h2>Education</h2>
-
-<p>
-
-<b>Master of Computer Applications (MCA)</b><br>
-Vivekanand Education Society's Institute of Technology
-
-</p>
-
-<p>
-
-<b>Bachelor of Science in Computer Science</b><br>
-J.K College of Science and Commerce
-
-</p>
-
+<p><b>MCA</b> - Vivekanand Education Society's Institute of Technology</p>
+<p><b>B.Sc Computer Science</b> - J.K College of Science and Commerce</p>
 </div>
 
-<footer>
-
-© 2026 Kaushik Janmanchi
-
-</footer>
+<footer>© 2026 Kaushik Janmanchi</footer>
 
 </div>
-
 </body>
-
 </html>
