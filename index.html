@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kaushik Janmanchi | Portfolio</title>
 <style>
-/* Reset & body styling */
 body {
     margin: 0;
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -16,7 +15,6 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
-
 body::before {
     content: "";
     position: fixed;
@@ -25,42 +23,33 @@ body::before {
     background: rgba(10,14,25,0.85);
     z-index: -1;
 }
-
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 40px 20px;
 }
-
-/* Header */
 header {
     text-align: center;
     margin-bottom: 40px;
 }
-
 header h1 {
     font-size: 42px;
     margin-bottom: 5px;
 }
-
 header .role {
     font-size: 18px;
     color: #38bdf8;
 }
-
-/* Intro */
 .intro {
     text-align: center;
     max-width: 700px;
     margin: 20px auto 40px;
     color: #cbd5f5;
 }
-
 .buttons {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .buttons a {
     text-decoration: none;
     margin: 0 12px;
@@ -71,12 +60,9 @@ header .role {
     font-weight: 600;
     transition: 0.2s;
 }
-
 .buttons a:hover {
     background: #0ea5e9;
 }
-
-/* Widget for Experience */
 .widget {
     text-align: center;
     background: rgba(15,23,42,0.65);
@@ -86,39 +72,31 @@ header .role {
     display: inline-block;
     margin-bottom: 60px;
 }
-
 .widget h2 {
     font-size: 32px;
     margin: 0;
     color: #38bdf8;
 }
-
 .widget span {
     display: block;
     margin-top: 5px;
     font-size: 15px;
     color: #94a3b8;
 }
-
-/* Sections */
 .section {
     margin-bottom: 60px;
 }
-
 .section h2 {
     font-size: 26px;
     border-bottom: 1px solid #1e293b;
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
-
-/* Skills */
 .skills {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-
 .skills span {
     background: rgba(30,41,59,0.7);
     padding: 8px 14px;
@@ -126,8 +104,6 @@ header .role {
     font-size: 14px;
     border: 1px solid rgba(255,255,255,0.05);
 }
-
-/* Work / Projects cards */
 .card {
     background: rgba(15,23,42,0.65);
     backdrop-filter: blur(10px);
@@ -137,37 +113,40 @@ header .role {
     border: 1px solid rgba(255,255,255,0.05);
     transition: transform 0.2s, border-color 0.2s;
 }
-
 .card:hover {
     transform: translateY(-5px);
     border-color: #38bdf8;
 }
-
 .card h3 {
     margin-top: 0;
 }
-
 .card span {
     font-size: 14px;
     color: #94a3b8;
 }
-
-/* Footer */
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #38bdf8;
+    color: #020617;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    transition: 0.2s;
+}
+.card a:hover {
+    background: #0ea5e9;
+}
 footer {
     text-align: center;
     color: #94a3b8;
     font-size: 14px;
     margin-top: 70px;
 }
-
-/* Responsive tweaks */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
-    .widget h2 {
-        font-size: 26px;
-    }
+    header h1 { font-size: 32px; }
+    .widget h2 { font-size: 26px; }
 }
 </style>
 </head>
@@ -237,6 +216,32 @@ Site Reliability and DevOps Engineer with 5+ years of experience managing large-
 <ul>
 <li>Developed data pipelines and automated reporting workflows, reducing manual work by 50%.</li>
 </ul>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Projects / Portfolio</h2>
+
+<div class="card">
+<h3>Distributed Job Monitoring System</h3>
+<span>Python, Bash, AWS, Kubernetes</span>
+<p>Built a distributed job monitoring and analytics platform with retry logic, consolidated reporting, and real-time dashboards.</p>
+<a href="https://github.com/kaushik-janmanchi/job-monitoring" target="_blank">View on GitHub</a>
+</div>
+
+<div class="card">
+<h3>Automated Reporting Dashboard</h3>
+<span>Python, MySQL, Grafana</span>
+<p>Created automated analytics dashboards and reporting pipelines for high-volume datasets, reducing manual reporting by 50%.</p>
+<a href="https://github.com/kaushik-janmanchi/reporting-dashboard" target="_blank">View on GitHub</a>
+</div>
+
+<div class="card">
+<h3>Infrastructure as Code Templates</h3>
+<span>Terraform, AWS</span>
+<p>Developed reusable IaC templates for cloud infrastructure provisioning, supporting multi-region deployments and monitoring integrations.</p>
+<a href="https://github.com/kaushik-janmanchi/terraform-templates" target="_blank">View on GitHub</a>
 </div>
 
 </div>
