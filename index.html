@@ -1,183 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Kaushik Janmanchi</title>
 
 <style>
 
 body{
+font-family: system-ui;
 margin:0;
-font-family:Inter,system-ui;
 background:#0b0f19;
-color:white;
+color:#e2e8f0;
 }
 
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#0f172a;
-position:sticky;
-top:0;
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
 }
 
-nav a{
+/* HEADER */
+
+header h1{
+font-size:40px;
+margin-bottom:5px;
+}
+
+header h2{
+font-weight:500;
+color:#38bdf8;
+margin-top:0;
+}
+
+.contact{
 color:#94a3b8;
-margin-left:20px;
-text-decoration:none;
 font-size:14px;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
-
-.hero{
-padding:120px 10%;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#94a3b8;
-font-size:18px;
-}
-
-/* TERMINAL */
-
-.terminal{
-background:black;
-padding:25px;
-border-radius:10px;
-margin-top:30px;
-color:#00ff9c;
-font-family:monospace;
-white-space:pre-wrap;
-}
-
-/* STATS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-padding:60px 10%;
-}
-
-.stat{
-background:#0f172a;
-padding:30px;
-border-radius:10px;
-text-align:center;
-transition:0.3s;
-}
-
-.stat:hover{
-transform:translateY(-6px);
-}
-
-.stat h2{
-color:#38bdf8;
-font-size:38px;
-margin:0;
-}
-
-.stat p{
-color:#94a3b8;
 margin-top:10px;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+/* SUMMARY */
+
+.summary{
+margin-top:20px;
+line-height:1.6;
+color:#cbd5f5;
+}
+
+/* EXPERIENCE WIDGET */
+
+.widget{
+margin-top:30px;
+display:flex;
+align-items:center;
+gap:20px;
+background:#0f172a;
+border:1px solid #1e293b;
+padding:20px;
+border-radius:10px;
+width:fit-content;
+}
+
+.widget-number{
+font-size:42px;
+font-weight:700;
+color:#38bdf8;
+}
+
+.widget-text{
+color:#94a3b8;
 }
 
 /* SECTION */
 
-.section{
-padding:80px 10%;
+section{
+margin-top:50px;
 }
 
-.section h2{
-font-size:32px;
-margin-bottom:30px;
+section h3{
+border-bottom:1px solid #1e293b;
+padding-bottom:10px;
+margin-bottom:20px;
 }
 
-/* CARDS */
+/* SKILLS */
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
-
-.card{
-background:#0f172a;
-padding:30px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card h3{
-margin-top:0;
-color:#38bdf8;
-}
-
-.card ul{
-color:#94a3b8;
-}
-
-/* TECH STACK */
-
-.stack span{
-display:inline-block;
+.skills span{
 background:#1e293b;
-padding:8px 12px;
+padding:6px 12px;
+border-radius:6px;
+font-size:13px;
 margin:5px;
-border-radius:6px;
+display:inline-block;
+}
+
+/* JOB */
+
+.job{
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+border:1px solid #1e293b;
+}
+
+.company{
+color:#94a3b8;
 font-size:14px;
+margin-bottom:10px;
 }
 
-/* BUTTONS */
-
-.buttons{
-margin-top:30px;
-}
-
-.btn{
-background:#38bdf8;
-color:black;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-margin-right:10px;
-}
-
-.btn-outline{
-border:1px solid #38bdf8;
-color:#38bdf8;
-padding:10px 18px;
-border-radius:6px;
-text-decoration:none;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-color:#64748b;
+ul{
+padding-left:20px;
+line-height:1.6;
 }
 
 </style>
@@ -186,204 +129,198 @@ color:#64748b;
 
 <body>
 
-<nav>
+<div class="container">
 
-<div><strong>Kaushik Janmanchi</strong></div>
+<header>
 
-<div>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#stack">Tech</a>
+<h1>Kaushik Janmanchi</h1>
+
+<h2>GraphDB Specialist (Technical Support Engineer)</h2>
+
+<div class="contact">
+kaushik.janmanchi@gmail.com • 8108616917 •
+<a href="https://www.linkedin.com/in/kaushik-janmanchi-2978b3157/" target="_blank">LinkedIn</a>
 </div>
 
-</nav>
+<p class="summary">
 
-<section class="hero">
-
-<h1>GraphDB Specialist</h1>
-
-<p>Distributed Systems • Reliability Engineering • Cloud Infrastructure</p>
-
-<div class="buttons">
-
-<a class="btn" href="Kaushik-Janmanchi-Resume.pdf" download>Download Resume</a>
-
-<a class="btn-outline" href="https://www.linkedin.com/in/kaushik-janmanchi-2978b3157/" target="_blank">LinkedIn</a>
-
-<a class="btn-outline" href="mailto:kaushik.janmanchi@gmail.com">Email</a>
-
-</div>
-
-<pre class="terminal">
-$ whoami
-Kaushik Janmanchi
-
-$ role
-GraphDB Specialist
-
-$ focus
-Distributed Systems
-Cloud Reliability
-Infrastructure Automation
-</pre>
-
-</section>
-
-<section class="stats">
-
-<div class="stat">
-<h2>5+</h2>
-<p>Years Experience</p>
-</div>
-
-<div class="stat">
-<h2>22K+</h2>
-<p>Customers Supported</p>
-</div>
-
-<div class="stat">
-<h2>40%</h2>
-<p>Automation Efficiency Gain</p>
-</div>
-
-<div class="stat">
-<h2>30%</h2>
-<p>MTTR Reduction</p>
-</div>
-
-</section>
-
-<section id="about" class="section">
-
-<h2>About</h2>
-
-<p style="color:#94a3b8">
-
-GraphDB Specialist with experience supporting large-scale distributed
-systems across global production environments. Skilled in debugging
-complex platform issues, automation development, and reliability
-engineering across cloud infrastructure and data platforms.
+Site Reliability and DevOps Engineer with 5+ years of experience managing
+large-scale distributed and cloud-native systems in production environments.
+Proficient in Kubernetes, Docker, AWS, Infrastructure as Code, and observability
+tools to build reliable and scalable platforms.
 
 </p>
 
-</section>
-
-<section id="experience" class="section">
-
-<h2>Experience</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>GraphDB Specialist</h3>
-
-<ul>
-
-<li>Diagnose distributed graph database performance issues</li>
-
-<li>Debug cluster failures and query bottlenecks</li>
-
-<li>Work with engineering teams to improve reliability</li>
-
-<li>Support enterprise production deployments</li>
-
-</ul>
-
+<div class="widget">
+<div class="widget-number">5+</div>
+<div class="widget-text">Years Experience in Distributed Systems & Cloud Infrastructure</div>
 </div>
 
-<div class="card">
+</header>
 
-<h3>Cloud Reliability Engineering</h3>
 
-<ul>
+<section>
 
-<li>Automated monitoring and diagnostics using Python</li>
+<h3>Technical Skills</h3>
 
-<li>Improved observability using Prometheus and Grafana</li>
-
-<li>Reduced MTTR during production incidents</li>
-
-<li>Handled multi-region distributed environments</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects" class="section">
-
-<h2>Key Work Highlights</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Automation Framework</h3>
-
-<ul>
-
-<li>Python framework for system diagnostics</li>
-
-<li>Automated log analysis pipelines</li>
-
-<li>Reduced manual debugging effort</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>Analytics Automation</h3>
-
-<ul>
-
-<li>Built reporting automation using Python</li>
-
-<li>Integrated MySQL data pipelines</li>
-
-<li>Reduced manual operational workload</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="stack" class="section">
-
-<h2>Tech Stack</h2>
-
-<div class="stack">
+<div class="skills">
 
 <span>Python</span>
-<span>Bash</span>
-<span>Linux</span>
+<span>Shell Scripting</span>
+<span>Java</span>
+<span>SQL</span>
 <span>Kubernetes</span>
 <span>Docker</span>
 <span>AWS</span>
 <span>Prometheus</span>
 <span>Grafana</span>
-<span>MySQL</span>
-<span>Distributed Systems</span>
+<span>Datadog</span>
+<span>Linux</span>
+<span>CI/CD</span>
 
 </div>
 
 </section>
 
-<footer>
 
-© 2026 Kaushik Janmanchi
+<section>
 
-</footer>
+<h3>Professional Experience</h3>
+
+
+<div class="job">
+
+<h4>GraphDB Specialist (Technical Support Engineer)</h4>
+
+<p class="company">Agivant Technologies • Oct 2025 – Present</p>
+
+<ul>
+
+<li>Supported large-scale distributed GraphDB clusters handling analytical workloads.</li>
+
+<li>Diagnosed cluster performance bottlenecks, JVM memory issues, and query optimization challenges.</li>
+
+<li>Automated health checks and log analysis pipelines using Python and Bash improving operational efficiency by 40%.</li>
+
+<li>Resolved complex L3 issues involving distributed storage, indexing, and query latency.</li>
+
+<li>Analyzed telemetry and cluster metrics to optimize performance across distributed environments.</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="job">
+
+<h4>Site Reliability Engineer</h4>
+
+<p class="company">Oracle • Jun 2024 – Sep 2025</p>
+
+<ul>
+
+<li>Engineered automation frameworks in Python and Bash for distributed systems serving 22,000+ customers.</li>
+
+<li>Troubleshot large-scale distributed applications reducing MTTR by ~30%.</li>
+
+<li>Led root cause analysis for multi-region production incidents.</li>
+
+<li>Improved observability pipelines using Prometheus and Grafana.</li>
+
+<li>Optimized Linux system performance across cloud environments.</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="job">
+
+<h4>Associate Software Engineer</h4>
+
+<p class="company">Solera Holdings • Oct 2022 – Jun 2024</p>
+
+<ul>
+
+<li>Built data pipelines using Python and MySQL for analytics dashboards.</li>
+
+<li>Automated reporting workflows reducing manual effort by 50%.</li>
+
+<li>Optimized data queries and aggregation across large datasets.</li>
+
+<li>Improved analytics performance across high-volume data systems.</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="job">
+
+<h4>System Trainee</h4>
+
+<p class="company">Intellect Design Arena • Aug 2021 – Oct 2022</p>
+
+<ul>
+
+<li>Migrated Oracle database workflows improving data retrieval by 25%.</li>
+
+<li>Implemented change requests improving product functionality.</li>
+
+<li>Supported deployment of enterprise lending platform on Linux environments.</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="job">
+
+<h4>Project Intern</h4>
+
+<p class="company">Intellect Design Arena • Feb 2021 – Jun 2021</p>
+
+<ul>
+
+<li>Upgraded legacy Java and Oracle modules improving system performance by 20%.</li>
+
+<li>Assisted in testing cycles reducing post-deployment issues.</li>
+
+<li>Implemented feature enhancements improving system stability.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<h3>Education</h3>
+
+<p>
+
+<b>Master of Computer Applications (MCA)</b><br>
+Vivekanand Education Society's Institute of Technology
+
+</p>
+
+<p>
+
+<b>B.Sc Computer Science</b><br>
+J.K College of Science and Commerce
+
+</p>
+
+</section>
+
+</div>
 
 </body>
-
 </html>
