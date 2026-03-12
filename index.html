@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Kaushik Janmanchi | GraphDB Specialist</title>
 
@@ -17,11 +18,37 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
+
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#020617,#0f172a);
+background:#020617;
 color:#e2e8f0;
-line-height:1.6;
+
+}
+
+/* animated background */
+
+body::before{
+
+content:'';
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(circle at 20% 20%,#1e293b,transparent),
+radial-gradient(circle at 80% 30%,#0ea5e9,transparent),
+radial-gradient(circle at 50% 80%,#6366f1,transparent);
+
+opacity:0.2;
+z-index:-1;
+
 }
 
 /* container */
@@ -32,140 +59,222 @@ margin:auto;
 padding:40px 20px;
 }
 
-/* navigation */
+/* navbar */
 
 nav{
+
+position:sticky;
+top:0;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:80px;
+
+background:rgba(2,6,23,0.7);
+backdrop-filter:blur(8px);
+
+padding:20px;
+border-bottom:1px solid #1e293b;
+
 }
 
 nav h2{
+
 font-weight:700;
+letter-spacing:1px;
+
 }
 
 nav a{
+
 margin-left:20px;
 color:#94a3b8;
 text-decoration:none;
+
 }
 
 nav a:hover{
+
 color:#38bdf8;
+
 }
 
 /* hero */
 
 .hero{
+
+margin-top:80px;
 margin-bottom:120px;
+
 }
 
 .hero h1{
-font-size:56px;
-font-weight:700;
+
+font-size:60px;
 margin-bottom:10px;
+
 }
 
 .hero h2{
+
 color:#38bdf8;
 margin-bottom:20px;
+
 }
 
 .hero p{
+
 max-width:650px;
 color:#94a3b8;
+
 }
 
 .buttons{
+
 margin-top:30px;
+
 }
 
 .btn{
+
 display:inline-block;
-padding:12px 22px;
+padding:12px 24px;
 border-radius:8px;
 margin-right:10px;
-font-size:14px;
 font-weight:600;
 text-decoration:none;
+transition:0.3s;
+
 }
 
 .primary{
+
 background:#38bdf8;
 color:black;
+
+}
+
+.primary:hover{
+
+background:#0ea5e9;
+
 }
 
 .secondary{
+
 border:1px solid #38bdf8;
 color:#38bdf8;
+
 }
 
-/* section */
+.secondary:hover{
 
-section{
-margin-bottom:100px;
-}
+background:#38bdf8;
+color:black;
 
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-}
-
-/* glass cards */
-
-.card{
-background:rgba(30,41,59,0.5);
-backdrop-filter:blur(10px);
-padding:25px;
-border-radius:12px;
-margin-bottom:20px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.card span{
-color:#38bdf8;
-font-size:14px;
-}
-
-/* skills */
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.skill-card{
-background:rgba(30,41,59,0.5);
-padding:20px;
-border-radius:10px;
-}
-
-.skill-card h4{
-margin-bottom:10px;
-color:#38bdf8;
 }
 
 /* terminal */
 
 .terminal{
+
 background:black;
+margin-top:30px;
 padding:20px;
 border-radius:10px;
 font-family:monospace;
 color:#22c55e;
-margin-top:30px;
+
 }
 
+/* sections */
+
+section{
+
+margin-bottom:120px;
+
+}
+
+.section-title{
+
+font-size:34px;
+margin-bottom:40px;
+
+}
+
+/* cards */
+
+.card{
+
+background:#0f172a;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* timeline */
+
+.timeline{
+
+border-left:2px solid #1e293b;
+padding-left:20px;
+
+}
+
+.timeline-item{
+
+margin-bottom:40px;
+
+}
+
+.timeline-item span{
+
+color:#38bdf8;
+font-size:14px;
+
+}
+
+/* skills */
+
+.skills{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+.skill{
+
+background:#0f172a;
+padding:20px;
+border-radius:10px;
+
+}
+
+.skill h4{
+
+margin-bottom:10px;
+color:#38bdf8;
+
+}
+
+/* footer */
+
 footer{
+
 text-align:center;
 margin-top:80px;
 color:#64748b;
+
 }
 
 </style>
@@ -174,19 +283,21 @@ color:#64748b;
 
 <body>
 
-<div class="container">
-
 <nav>
 
 <h2>Kaushik</h2>
 
 <div>
+
 <a href="#about">About</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
+
 </div>
 
 </nav>
+
+<div class="container">
 
 <section class="hero">
 
@@ -195,7 +306,9 @@ color:#64748b;
 <h2>GraphDB Specialist</h2>
 
 <p>
-Site Reliability and Platform Engineer with 5+ years of experience managing large-scale distributed systems, cloud infrastructure, and production reliability across enterprise environments.
+
+Site Reliability and Platform Engineer with 5+ years of experience operating large-scale distributed systems, cloud-native infrastructure, and production environments.
+
 </p>
 
 <div class="buttons">
@@ -216,8 +329,8 @@ Kaushik Janmanchi
 $ role  
 GraphDB Specialist  
 
-$ expertise  
-Distributed Systems | Cloud | Reliability Engineering  
+$ focus  
+Distributed Systems | Reliability | Cloud Infrastructure  
 
 </div>
 
@@ -230,7 +343,9 @@ Distributed Systems | Cloud | Reliability Engineering
 <div class="card">
 
 <p>
-Graph database specialist and reliability engineer experienced in troubleshooting distributed analytical systems, optimizing cluster performance, and building automation for large production environments across cloud and on-prem infrastructure.
+
+Graph database specialist experienced in troubleshooting distributed analytical clusters, optimizing performance, and improving reliability across production environments.
+
 </p>
 
 </div>
@@ -239,49 +354,61 @@ Graph database specialist and reliability engineer experienced in troubleshootin
 
 <section id="experience">
 
-<h2 class="section-title">Professional Experience</h2>
+<h2 class="section-title">Experience</h2>
 
-<div class="card">
+<div class="timeline">
+
+<div class="timeline-item">
 
 <h3>GraphDB Specialist</h3>
 <span>Agivant Technologies • 2025 — Present</span>
 
 <p>
-Supporting distributed graph database clusters handling large analytical workloads. Focused on performance tuning, JVM optimization, and production reliability.
+
+Supporting distributed graph database clusters and resolving performance issues across production workloads.
+
 </p>
 
 </div>
 
-<div class="card">
+<div class="timeline-item">
 
 <h3>Site Reliability Engineer</h3>
 <span>Oracle • 2024 — 2025</span>
 
 <p>
-Built automation frameworks and monitoring pipelines supporting infrastructure used by thousands of enterprise customers across global regions.
+
+Built monitoring and automation frameworks supporting infrastructure serving thousands of customers.
+
 </p>
 
 </div>
 
-<div class="card">
+<div class="timeline-item">
 
 <h3>Associate Software Engineer</h3>
 <span>Solera Holdings • 2022 — 2024</span>
 
 <p>
-Developed analytics pipelines and automated reporting systems using Python and MySQL to process large operational datasets.
+
+Developed data pipelines and analytics automation using Python and MySQL.
+
 </p>
 
 </div>
 
-<div class="card">
+<div class="timeline-item">
 
 <h3>System Trainee</h3>
 <span>Intellect Design Arena • 2021 — 2022</span>
 
 <p>
-Worked on enterprise banking systems and optimized Oracle database workflows for improved performance.
+
+Worked on enterprise banking systems and optimized Oracle database integrations.
+
 </p>
+
+</div>
 
 </div>
 
@@ -289,39 +416,51 @@ Worked on enterprise banking systems and optimized Oracle database workflows for
 
 <section id="skills">
 
-<h2 class="section-title">Technical Skills</h2>
+<h2 class="section-title">Tech Stack</h2>
 
 <div class="skills">
 
-<div class="skill-card">
+<div class="skill">
+
 <h4>Languages</h4>
+
 Python<br>
 Java<br>
 Shell<br>
 SQL
+
 </div>
 
-<div class="skill-card">
+<div class="skill">
+
 <h4>Cloud</h4>
+
 AWS<br>
 Kubernetes<br>
 Docker<br>
 EKS
+
 </div>
 
-<div class="skill-card">
+<div class="skill">
+
 <h4>Observability</h4>
+
 Prometheus<br>
 Grafana<br>
 Datadog
+
 </div>
 
-<div class="skill-card">
+<div class="skill">
+
 <h4>Infrastructure</h4>
+
 Linux<br>
 Terraform<br>
-CI/CD<br>
-Jenkins
+Jenkins<br>
+CI/CD
+
 </div>
 
 </div>
@@ -337,4 +476,5 @@ Jenkins
 </div>
 
 </body>
+
 </html>
