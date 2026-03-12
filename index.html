@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kaushik Janmanchi</title>
 
 <style>
 
 body{
-font-family: system-ui;
 margin:0;
+font-family:system-ui;
 background:#0b0f19;
 color:#e2e8f0;
+line-height:1.6;
 }
 
 .container{
@@ -25,21 +25,20 @@ padding:40px 20px;
 
 /* HEADER */
 
-header h1{
-font-size:40px;
+h1{
+font-size:42px;
 margin-bottom:5px;
 }
 
-header h2{
-font-weight:500;
+.role{
+font-size:18px;
 color:#38bdf8;
-margin-top:0;
 }
 
 .contact{
+margin-top:10px;
 color:#94a3b8;
 font-size:14px;
-margin-top:10px;
 }
 
 .contact a{
@@ -47,30 +46,55 @@ color:#38bdf8;
 text-decoration:none;
 }
 
+/* BUTTONS */
+
+.buttons{
+margin-top:25px;
+}
+
+.btn{
+background:#38bdf8;
+color:#000;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+margin-right:10px;
+font-size:14px;
+}
+
+.btn-outline{
+border:1px solid #38bdf8;
+color:#38bdf8;
+padding:10px 16px;
+border-radius:6px;
+text-decoration:none;
+margin-right:10px;
+font-size:14px;
+}
+
 /* SUMMARY */
 
 .summary{
-margin-top:20px;
-line-height:1.6;
+margin-top:25px;
 color:#cbd5f5;
 }
 
 /* EXPERIENCE WIDGET */
 
 .widget{
-margin-top:30px;
+margin-top:35px;
 display:flex;
 align-items:center;
-gap:20px;
+gap:18px;
 background:#0f172a;
-border:1px solid #1e293b;
-padding:20px;
+padding:20px 25px;
 border-radius:10px;
+border:1px solid #1e293b;
 width:fit-content;
 }
 
 .widget-number{
-font-size:42px;
+font-size:40px;
 font-weight:700;
 color:#38bdf8;
 }
@@ -82,10 +106,10 @@ color:#94a3b8;
 /* SECTION */
 
 section{
-margin-top:50px;
+margin-top:60px;
 }
 
-section h3{
+section h2{
 border-bottom:1px solid #1e293b;
 padding-bottom:10px;
 margin-bottom:20px;
@@ -102,14 +126,19 @@ margin:5px;
 display:inline-block;
 }
 
-/* JOB */
+/* JOB CARDS */
 
 .job{
 background:#0f172a;
-padding:20px;
+padding:22px;
 border-radius:10px;
 margin-bottom:20px;
 border:1px solid #1e293b;
+transition:0.2s;
+}
+
+.job:hover{
+transform:translateY(-3px);
 }
 
 .company{
@@ -120,48 +149,90 @@ margin-bottom:10px;
 
 ul{
 padding-left:20px;
-line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:60px;
+text-align:center;
+color:#64748b;
+font-size:14px;
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 <div class="container">
 
-<header>
+<!-- HEADER -->
 
 <h1>Kaushik Janmanchi</h1>
 
-<h2>GraphDB Specialist (Technical Support Engineer)</h2>
+<div class="role">
+GraphDB Specialist (Technical Support Engineer)
+</div>
 
 <div class="contact">
 kaushik.janmanchi@gmail.com • 8108616917 •
-<a href="https://www.linkedin.com/in/kaushik-janmanchi-2978b3157/" target="_blank">LinkedIn</a>
+<a href="https://www.linkedin.com/in/kaushik-janmanchi-2978b3157/" target="_blank">
+linkedin.com/in/kaushik-janmanchi-2978b3157
+</a>
 </div>
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+<a class="btn" href="Kaushik-Janmanchi-Resume.pdf" download>
+Download Resume
+</a>
+
+<a class="btn-outline"
+href="https://www.linkedin.com/in/kaushik-janmanchi-2978b3157/"
+target="_blank">
+LinkedIn
+</a>
+
+<a class="btn-outline"
+href="mailto:kaushik.janmanchi@gmail.com">
+Email
+</a>
+
+</div>
+
+<!-- SUMMARY -->
 
 <p class="summary">
 
 Site Reliability and DevOps Engineer with 5+ years of experience managing
 large-scale distributed and cloud-native systems in production environments.
 Proficient in Kubernetes, Docker, AWS, Infrastructure as Code, and observability
-tools to build reliable and scalable platforms.
+tools to build reliable and scalable platforms. Experienced in Linux platform
+debugging, incident management, and automation with a strong focus on improving
+system reliability and operational efficiency.
 
 </p>
 
+<!-- EXPERIENCE WIDGET -->
+
 <div class="widget">
 <div class="widget-number">5+</div>
-<div class="widget-text">Years Experience in Distributed Systems & Cloud Infrastructure</div>
+<div class="widget-text">
+Years Experience in Distributed Systems & Cloud Infrastructure
+</div>
 </div>
 
-</header>
 
+<!-- SKILLS -->
 
 <section>
 
-<h3>Technical Skills</h3>
+<h2>Technical Skills</h2>
 
 <div class="skills">
 
@@ -172,39 +243,44 @@ tools to build reliable and scalable platforms.
 <span>Kubernetes</span>
 <span>Docker</span>
 <span>AWS</span>
+<span>Amazon EKS</span>
 <span>Prometheus</span>
 <span>Grafana</span>
 <span>Datadog</span>
 <span>Linux</span>
 <span>CI/CD</span>
+<span>Jenkins</span>
+<span>Git</span>
 
 </div>
 
 </section>
 
 
+<!-- EXPERIENCE -->
+
 <section>
 
-<h3>Professional Experience</h3>
+<h2>Professional Experience</h2>
 
 
 <div class="job">
 
-<h4>GraphDB Specialist (Technical Support Engineer)</h4>
+<h3>GraphDB Specialist (Technical Support Engineer)</h3>
 
-<p class="company">Agivant Technologies • Oct 2025 – Present</p>
+<p class="company">
+Agivant Technologies • Oct 2025 – Present
+</p>
 
 <ul>
 
-<li>Supported large-scale distributed GraphDB clusters handling analytical workloads.</li>
+<li>Supported distributed GraphDB clusters handling large analytical workloads.</li>
 
-<li>Diagnosed cluster performance bottlenecks, JVM memory issues, and query optimization challenges.</li>
+<li>Diagnosed JVM memory issues, query bottlenecks, and cluster performance problems.</li>
 
 <li>Automated health checks and log analysis pipelines using Python and Bash improving operational efficiency by 40%.</li>
 
-<li>Resolved complex L3 issues involving distributed storage, indexing, and query latency.</li>
-
-<li>Analyzed telemetry and cluster metrics to optimize performance across distributed environments.</li>
+<li>Resolved complex L3 production issues across distributed storage and indexing systems.</li>
 
 </ul>
 
@@ -214,22 +290,22 @@ tools to build reliable and scalable platforms.
 
 <div class="job">
 
-<h4>Site Reliability Engineer</h4>
+<h3>Site Reliability Engineer</h3>
 
-<p class="company">Oracle • Jun 2024 – Sep 2025</p>
+<p class="company">
+Oracle • Jun 2024 – Sep 2025
+</p>
 
 <ul>
 
-<li>Engineered automation frameworks in Python and Bash for distributed systems serving 22,000+ customers.</li>
+<li>Built Python and Bash automation frameworks for distributed systems serving 22K+ customers.</li>
 
-<li>Troubleshot large-scale distributed applications reducing MTTR by ~30%.</li>
+<li>Troubleshot distributed applications reducing MTTR by ~30%.</li>
 
-<li>Led root cause analysis for multi-region production incidents.</li>
+<li>Led root cause analysis for production incidents across multi-region environments.</li>
 
 <li>Improved observability pipelines using Prometheus and Grafana.</li>
 
-<li>Optimized Linux system performance across cloud environments.</li>
-
 </ul>
 
 </div>
@@ -238,19 +314,19 @@ tools to build reliable and scalable platforms.
 
 <div class="job">
 
-<h4>Associate Software Engineer</h4>
+<h3>Associate Software Engineer</h3>
 
-<p class="company">Solera Holdings • Oct 2022 – Jun 2024</p>
+<p class="company">
+Solera Holdings • Oct 2022 – Jun 2024
+</p>
 
 <ul>
 
-<li>Built data pipelines using Python and MySQL for analytics dashboards.</li>
+<li>Developed data pipelines using Python and MySQL for analytics platforms.</li>
 
 <li>Automated reporting workflows reducing manual effort by 50%.</li>
 
-<li>Optimized data queries and aggregation across large datasets.</li>
-
-<li>Improved analytics performance across high-volume data systems.</li>
+<li>Optimized large-scale data queries and aggregation performance.</li>
 
 </ul>
 
@@ -260,65 +336,50 @@ tools to build reliable and scalable platforms.
 
 <div class="job">
 
-<h4>System Trainee</h4>
+<h3>System Trainee</h3>
 
-<p class="company">Intellect Design Arena • Aug 2021 – Oct 2022</p>
+<p class="company">
+Intellect Design Arena • Aug 2021 – Oct 2022
+</p>
 
 <ul>
 
-<li>Migrated Oracle database workflows improving data retrieval by 25%.</li>
+<li>Migrated Oracle database workflows improving data retrieval speed by 25%.</li>
 
-<li>Implemented change requests improving product functionality.</li>
-
-<li>Supported deployment of enterprise lending platform on Linux environments.</li>
+<li>Supported enterprise lending platform deployment on Linux environments.</li>
 
 </ul>
 
 </div>
 
-
-
-<div class="job">
-
-<h4>Project Intern</h4>
-
-<p class="company">Intellect Design Arena • Feb 2021 – Jun 2021</p>
-
-<ul>
-
-<li>Upgraded legacy Java and Oracle modules improving system performance by 20%.</li>
-
-<li>Assisted in testing cycles reducing post-deployment issues.</li>
-
-<li>Implemented feature enhancements improving system stability.</li>
-
-</ul>
-
-</div>
 
 </section>
 
 
+<!-- EDUCATION -->
 
 <section>
 
-<h3>Education</h3>
+<h2>Education</h2>
 
 <p>
-
 <b>Master of Computer Applications (MCA)</b><br>
 Vivekanand Education Society's Institute of Technology
-
 </p>
 
 <p>
-
 <b>B.Sc Computer Science</b><br>
 J.K College of Science and Commerce
-
 </p>
 
 </section>
+
+
+<footer>
+
+© 2026 Kaushik Janmanchi
+
+</footer>
 
 </div>
 
